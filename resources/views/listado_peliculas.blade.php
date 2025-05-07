@@ -36,12 +36,12 @@
                         <td>{{ $pelicula->director }}</td>
                         <td>{{ $pelicula->fecha_estreno }}</td>
                         <td>
-                            <a href="{{ route('editar', $pelicula->id) }}" class="btn btn-warning btn-sm">✏️ Editar</a>
+                            <a href="{{ route('editar', $pelicula->id) }}" class="btn btn-warning btn-sm"> Editar</a>
 
                             <form action="{{ route('eliminar', $pelicula->id) }}" method="POST" onsubmit="return confirm('¿Estás seguro de eliminar esta película?');" class="d-inline">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="btn btn-danger btn-sm">🗑️ Eliminar</button>
+                                <button type="submit" class="btn btn-danger btn-sm"> Eliminar</button>
                                 
                             </form>
                         </td>
