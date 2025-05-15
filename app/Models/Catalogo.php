@@ -7,9 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Catalogo extends Model
 {
+    use HasFactory;
+
     protected $table = 'catalogo';
     protected $fillable = ['titulo', 'descripcion', 'genero', 'director', 'fecha_estreno'];
-
-
-    use HasFactory;
 }

@@ -12,12 +12,17 @@ class CreateCatalogosTable extends Migration
      * @return void
      */
     public function up()
-    {
-        Schema::create('catalogos', function (Blueprint $table) {
+{
+   Schema::create('catalogo',function(Blueprint $table){
             $table->id();
-            $table->timestamps();
+            $table->string('Titulo');
+            $table->string('Descripcion');
+            $table->string('Genero');
+            $table->string('Director');
+            $table->date('fecha_estreno');
         });
-    }
+}
+
 
     /**
      * Reverse the migrations.
