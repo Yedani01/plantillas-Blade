@@ -40,7 +40,7 @@ class UsuarioController extends Controller
             'correo.required' => 'Debes ingresar un correo',
             'password.required' => 'la contraseña debe de ser minimo 8 caracteres',]);
 
-        // Crear el usuario
+       
         $usuario = new Usuario();
         $usuario->nombre = $validated['nombre'];
         $usuario->apellido_paterno = $validated['apellido_paterno'];
@@ -79,7 +79,7 @@ class UsuarioController extends Controller
 
         return redirect()->route('home')->with('success', '¡Bienvenido!');
     } else {
-        return back()->withErrors(['login' => 'Credenciales incorrectas']);
+        return back()->withErrors(['login' => 'Este usuario no esta registrado']);
     }
     
 }

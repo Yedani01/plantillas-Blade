@@ -35,7 +35,7 @@
                     type="text" 
                     name="titulo" 
                     value="{{ old('titulo', $pelicula->titulo) }}" 
-                    class="form-control bg-dark text-white border-info" >
+                    class="form-control bg-dark text-white border-info"value="{{ old('titulo') }}" >
             </div>
 
             <!-- Campo: Descripción -->
@@ -43,17 +43,17 @@
                 <label class="form-label">📝 Descripción</label>
                 <textarea 
                     name="descripcion" 
-                    class="form-control bg-dark text-white border-info" rows="3" >{{ old('descripcion', $pelicula->descripcion) }}</textarea>
+                    class="form-control bg-dark text-white border-info" rows="3" >{{ old('descripcion', $pelicula->descripcion) }} </textarea>
             </div>
 
             <!-- Campo: Género -->
             <div class="mb-3">
-                <label class="form-label">🎭 Género</label>
+                <label class="form-label">🎭 Género </label >
                 <input 
                     type="text" 
                     name="genero" 
                     value="{{ old('genero', $pelicula->genero) }}" 
-                    class="form-control bg-dark text-white border-info" >
+                    class="form-control bg-dark text-white border-info"  value="{{ old('genero') }}">
             </div>
 
             <!-- Campo: Director -->
@@ -63,7 +63,7 @@
                     type="text" 
                     name="director" 
                     value="{{ old('director', $pelicula->director) }}" 
-                    class="form-control bg-dark text-white border-info" >
+                    class="form-control bg-dark text-white border-info"  value="{{ old('director') }}">
             </div>
 
             <!-- Campo: Fecha de estreno -->
@@ -73,7 +73,7 @@
                     type="date" 
                     name="fecha_estreno" 
                     value="{{ old('fecha_estreno', $pelicula->fecha_estreno) }}" 
-                    class="form-control bg-dark text-white border-info" >
+                    class="form-control bg-dark text-white border-info"  value="{{ old('fecha_estreno') }}">
             </div>
 
             <!-- Botones de acción -->
